@@ -13,11 +13,11 @@ struct FrameworkTitleView: View {
     
     var body: some View {
         
-        VStack(spacing: 10) {
+        HStack() {
             Image(framework.imageName)
                 .renderingMode(.original)
                 .resizable()
-                .frame(width: 90, height: 90)
+                .frame(width: 70, height: 70)
                 .aspectRatio(contentMode: .fit)
                 
             Text("\(framework.name)")
@@ -25,8 +25,9 @@ struct FrameworkTitleView: View {
                 .fontWeight(.semibold)
                 .scaledToFit()
                 .minimumScaleFactor(0.5)
+                .padding()
         }
-        .padding()
+        
     }
 }
 
